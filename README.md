@@ -21,7 +21,14 @@ git push -u origin main
 ```
 (O arrastra todos los archivos al repositorio con "Add file → Upload files". Sube también la carpeta `assets`.)
 
-## 2. Publicar en Cloudflare Pages
+## 2a. Publicar en Cloudflare Workers (pantalla "Set up your application")
+El repositorio ya incluye `wrangler.jsonc` y `.assetsignore`. Valores:
+- Project name: `casapalma` (debe ser igual al `name` de `wrangler.jsonc`)
+- Build command: vacío
+- Deploy command: `npx wrangler deploy`
+- Preview command: dejar el valor que sugiere Cloudflare
+
+## 2b. Publicar en Cloudflare Pages (alternativa)
 1. Entra a dash.cloudflare.com → **Workers & Pages** → **Create** → pestaña **Pages** → **Connect to Git**.
 2. Elige el repositorio `casa-palma`.
 3. Configuración:
